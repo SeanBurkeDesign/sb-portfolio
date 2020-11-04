@@ -1,0 +1,19 @@
+.arrow-nav__link {
+  opacity: 1;
+  transition: opacity .5s ease-in-out;
+  width: 1.2rem;
+
+  @include breakpoint($large-mobile) {
+    width: 2.5rem;
+  }
+
+  svg {
+    fill: $navy;
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+    opacity: 0;
+    pointer-events: none;
+  }
+}

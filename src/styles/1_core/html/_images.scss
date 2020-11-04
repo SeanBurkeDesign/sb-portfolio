@@ -1,0 +1,24 @@
+img,
+svg {
+  border: 0;
+  display: block;
+  height: auto;
+  width: 100%;
+}
+
+img {
+  transition: opacity .5s ease-in-out;
+
+  &.lazyload:not([src]) {
+    visibility: hidden;
+  }
+
+  &.lazyload,
+  &.lazyloading {
+    opacity: 0;
+  }
+
+  &.lazyloaded {
+    opacity: 1;
+  }
+}

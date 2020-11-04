@@ -1,0 +1,18 @@
+.arrow-nav {
+  left: 0;
+  position: absolute;
+  top: 3rem;
+  width: 100%;
+  z-index: 1;
+
+  @include breakpoint($large-mobile) {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  &__inner {
+    @extend .wrapper-wide;
+    display: flex;
+    justify-content: space-between;
+  }
+}

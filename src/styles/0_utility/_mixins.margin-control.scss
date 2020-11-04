@@ -1,0 +1,11 @@
+$spacing-unit: 1.5rem;
+
+@mixin margin-control($center: false, $override: false) {
+  @if $center == true {
+    margin: $spacing-unit auto;
+  } @else if $override == true {
+    margin: 0 !important;
+  } @else {
+    margin: $spacing-unit 0;
+  }
+}

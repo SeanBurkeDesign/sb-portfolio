@@ -1,0 +1,16 @@
+.social-links__link {
+  color: $black;
+  display: block;
+  margin-right: 1.5rem;
+  max-width: 3rem;
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &:hover {
+    svg * {
+      fill: $orange;
+    }
+  }
+}

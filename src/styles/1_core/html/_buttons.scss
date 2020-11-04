@@ -1,0 +1,26 @@
+button {
+  @include font-size(14, 14);
+  background-color: transparent;
+  border: 0;
+  font-family: $sans;
+  font-weight: 600;
+  padding: 0;
+  text-transform: uppercase;
+
+  &.button--primary {
+    background-color: $navy;
+    color: $orange;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    cursor: pointer;
+    outline: none;
+  }
+
+  &:focus {
+    outline: 4px double currentColor;
+    outline-offset: .5rem;
+  }
+}

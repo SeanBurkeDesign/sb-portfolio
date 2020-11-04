@@ -1,0 +1,10 @@
+.nav__links {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0 0 0;
+
+  @include breakpoint($large-mobile) {
+    display: block;
+    margin: 0;
+  }
+}

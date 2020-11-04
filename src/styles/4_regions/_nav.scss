@@ -1,0 +1,21 @@
+.nav {
+  margin: 0 auto;
+  padding: 1rem 0;
+  position: relative;
+  width: calc(100% - 8rem);
+  z-index: 2;
+
+  @include breakpoint($large-mobile) {
+    z-index: 3;
+  }
+
+  &__inner {
+    @extend .wrapper-wide;
+
+    @include breakpoint($large-mobile) {
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

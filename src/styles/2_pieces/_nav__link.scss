@@ -1,0 +1,23 @@
+.nav__link {
+  background-image: linear-gradient($orange, $orange);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0% 3px;
+  border: 0;
+  margin: 0 1.5rem;
+  padding: 0 0 .5rem 0;
+  transition: background-size .3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    background-size: 100% 3px;
+  }
+
+  &:first-child {
+    margin-left: 0;
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+}

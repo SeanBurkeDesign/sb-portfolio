@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" class="no-js">
+
+  <head>
+  {% block head %}
+    {% include '../1_core/head.twig' %}
+  {% endblock %}
+  </head>
+
+  <body{{- bodyClass is defined ? ' class="' ~ bodyClass ~ '"' : '' }}>
+
+  {% block page_top %}
+    {% include '../4_regions/header.twig' %}
+  {% endblock %}
+
+  {% block page %}{% endblock %}
+
+  {% block page_bottom %}
+    {% include '../4_regions/footer.twig' %}
+  {% endblock %}
+
+  {% if not isBuild %}
+    {% include '../1_core/browser-sync.twig' %}
+  {% endif %}
+  </body>
+
+</html>
