@@ -7,11 +7,6 @@ button {
   padding: 0;
   text-transform: uppercase;
 
-  &.button--primary {
-    background-color: $navy;
-    color: $orange;
-  }
-
   &:hover,
   &:focus,
   &:active {
@@ -22,5 +17,28 @@ button {
   &:focus {
     outline: 4px double currentColor;
     outline-offset: .5rem;
+  }
+}
+
+.button {
+  @extend button;
+  padding: 1rem 2rem;
+  width: auto;
+
+  &--primary {
+    background-image: linear-gradient($navy, $navy);
+    background-position: 0 100%;
+    background-repeat: no-repeat;
+    background-size: 0 100%;
+    border: 2px solid $navy;
+    color: $navy;
+    transition: background-size .3s ease-in-out, color .3s ease-in-out;
+
+    &:hover,
+    &:focus {
+      background-size: 100% 100%;
+      border-color: $navy;
+      color: $white;
+    }
   }
 }
