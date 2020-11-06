@@ -1,0 +1,45 @@
+form {
+
+}
+
+label {
+  @include font-size(14, 14);
+  display: block;
+  font-weight: 600;
+  margin-bottom: .5rem;
+
+  span {
+    display: none;
+
+    .has-error & {
+      color: $red;
+      display: inline-block;
+    }
+  }
+}
+
+input,
+textarea {
+  border: 2px solid $navy;
+  font-family: $sans;
+  outline: none;
+  padding: 1rem;
+  width: 100%;
+
+  &:focus {
+    border: 2px solid $orange;
+  }
+
+  .has-error & {
+    border: 2px solid $red;
+  }
+}
+
+.input-group {
+  margin-bottom: 2rem;
+}
+
+.form-error {
+  @include font-size(16, 16);
+  color: $red;
+}
