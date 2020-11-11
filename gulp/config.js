@@ -9,7 +9,7 @@ module.exports = {
     server: false,
     open: false,
     notify: false,
-    port: 3000
+    port: 8000
   },
   favicon: {
     src: `${src}/favicon*.*`,
