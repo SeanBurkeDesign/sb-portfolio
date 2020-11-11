@@ -9,11 +9,20 @@
 
   svg {
     fill: $navy;
+    fill-opacity: .5;
+    transition: fill-opacity .3s ease;
   }
 
   &.disabled {
     cursor: not-allowed;
     opacity: 0;
     pointer-events: none;
+  }
+
+  &:hover,
+  &:focus {
+    svg {
+      fill-opacity: 1;
+    }
   }
 }
