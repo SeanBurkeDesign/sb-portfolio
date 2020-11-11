@@ -3,34 +3,42 @@
   height: 100%;
   left: 0;
   margin: 0 auto;
+  min-height: calc(100vh - 18rem);
   opacity: 0;
-  padding-top: 9rem;
+  overflow: hidden;
   position: absolute;
   right: 0;
   top: 0;
   transition: opacity .5s ease-in-out;
-  z-index: -1;
+  visibility: hidden;
 
   @include breakpoint($large-mobile) {
+    min-height: calc(100vh - 12rem);
     padding-top: 6rem;
     width: calc(100% - 11rem);
   }
 
   .app-loaded &.visible {
     opacity: 1;
-    z-index: 1;
-
-    @include breakpoint($large-mobile) {
-      z-index: 2;
-    }
+    overflow: visible;
+    position: relative;
+    visibility: visible;
   }
 
   &__inner {
     @extend .wrapper;
     align-self: center;
 
+    .app-loaded .visible & {
+      z-index: 1;
+    }
+
     @include breakpoint($large-mobile) {
       padding: 0;
+
+      .app-loaded .visible & {
+        z-index: 2;
+      }
     }
 
     @include breakpoint($large-tablet) {
