@@ -1,5 +1,5 @@
-const src = './src'
-const dest = './dist'
+const src = './app'
+const dest = './build'
 
 module.exports = {
   app: src,
