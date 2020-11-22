@@ -1,20 +1,18 @@
 import React from 'react'
+import { routes as navRoutes } from '../router/routes' 
 import Logo from './../pieces/Logo'
 import NavButton from './NavButton'
-
-const Nav = ({ handleClick }) => {
-
-  const targets = ['Bio', 'Work', 'Contact']
-
+  
+const Nav = () => {
   return (
     <nav className="nav">
       <div className="nav__inner">
         <div className="nav__logo">
-          <Logo targetSection="Hero" handleClick={handleClick}/>
+          <Logo path="/"/>
         </div>
         <div className="nav__links">
-          {targets.map((target, index) =>
-            <NavButton key={index} className="nav__link" targetSection={target} handleClick={handleClick}/>
+          {navRoutes.map((route) =>
+            <NavButton key={route.path} className="nav__link" name={route.name} path={route.path}/>
           )}
         </div>
       </div>

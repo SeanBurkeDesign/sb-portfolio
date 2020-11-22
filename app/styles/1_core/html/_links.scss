@@ -1,0 +1,10 @@
+a {
+  &:focus {
+    outline: 4px double currentColor;
+    outline-offset: .5rem;
+  }
+
+  &:visited {
+    color: inherit;
+  }
+}

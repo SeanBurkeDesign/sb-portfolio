@@ -8,18 +8,18 @@ const SocialLink = ({ name, url }) => {
   let icon
 
   switch (true) {
-  case (name == 'Github'):
-    icon = <Github/>
-    break
-  case (name == 'LinkedIn'):
-    icon = <LinkedIn/>
-    break
-  case (name == 'Email'):
-    icon = <Email/>
-    break
-  default: 
-    icon = null
-    break
+    case (name == 'Github'):
+      icon = <Github/>
+      break
+    case (name == 'LinkedIn'):
+      icon = <LinkedIn/>
+      break
+    case (name == 'Email'):
+      icon = <Email/>
+      break
+    default: 
+      icon = null
+      break
   }
 
   return (

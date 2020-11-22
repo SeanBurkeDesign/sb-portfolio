@@ -16,6 +16,7 @@
   &.disabled {
     cursor: not-allowed;
     opacity: 0;
+    outline: none;
     pointer-events: none;
   }
 

@@ -1,11 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
-const NavButton = ({ className, targetSection, handleClick }) => {
-
+const NavButton = ({ path, className, name }) => {  
   return (
-    <button className={`button ${className ? className : ''}`} type="button" onClick={() => (handleClick(targetSection))}>
-      { targetSection }
-    </button>
+    <Link to={path} className={`button ${className ?? ''}`}>
+      {name}
+    </Link>
   )
 }
 
