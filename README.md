@@ -13,3 +13,15 @@
   - Gulp
   - ESLint
   - Stylelint
+
+### To-Do
+  - [x] React Router
+  - [x] Redux
+  - [x] Class components => function components
+  - [ ] Add Express
+  - [ ] Remove Twig
+  - [ ] Production Dockerfile
+  - [ ] Headless CMS
+  - [ ] Swap Firebase for Mongo
+  - [ ] Reconfigure Hosting config
+
