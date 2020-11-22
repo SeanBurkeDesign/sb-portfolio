@@ -83,7 +83,8 @@ module.exports = {
       "warn",
       2,
       {
-        "ObjectExpression": "first"
+        "ObjectExpression": "first",
+        "SwitchCase": 1
       }
     ],
     "indent-legacy": "off",

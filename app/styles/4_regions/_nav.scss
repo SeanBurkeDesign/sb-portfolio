@@ -11,6 +11,7 @@
 
   &__inner {
     @extend .wrapper-wide;
+    padding: 0;
 
     @include breakpoint($large-mobile) {
       align-items: center;

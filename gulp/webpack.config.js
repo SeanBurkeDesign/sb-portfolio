@@ -5,7 +5,7 @@ const webpack = require('webpack')
 module.exports = {
   context: path.resolve(config.app),
   entry: {
-    app: './scripts/app.js',
+    app: './scripts/index.js',
   },
   output: {
     chunkFilename: '[name].bundle.js?[hash:6]',

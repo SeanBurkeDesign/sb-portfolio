@@ -1,12 +1,10 @@
 import React from 'react'
+import { updateLocation } from '../utils/helpers'
 
-const Work = ({ state, index }) => {
-
-  const activeSection = state.sections.find((section) => section.index == index)
-  const isActive = activeSection.active ? 'visible' : ''
-
+const Work = () => {
+  updateLocation()
   return (
-    <section className={`section work ${isActive}`} data-section={index}>
+    <section className="section work visible">
       <div className="section__inner">
         <h2>Recent Projects</h2>
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae aperiam quae atque, consequatur harum incidunt nobis, et illum modi optio eum delectus. Placeat, culpa illum ipsum molestias consectetur quidem provident.</p>
