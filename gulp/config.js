@@ -20,8 +20,8 @@ module.exports = {
     dest: `${dest}/images`
   },
   fonts: {
-    src: `${src}/fonts/**`,
-    dest: `${dest}/fonts`
+    src: `${src}/assets/fonts/**`,
+    dest: `${dest}/assets/fonts`
   },
   scripts: {
     all: `${src}/**/*.js`,
@@ -30,9 +30,8 @@ module.exports = {
   },
   styles: {
     src: [
-      `${src}/styles/**/*.{sass,scss}`
+      `${src}/assets/styles/**/*.{sass,scss}`
     ],
-    dest: `${dest}/styles`
-  },
+    dest: `${dest}/assets/styles`
   }
 }
