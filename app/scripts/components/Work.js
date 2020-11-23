@@ -1,8 +1,6 @@
 import React from 'react'
-import { updateLocation } from '../utils/helpers'
 
 const Work = () => {
-  updateLocation()
   return (
     <section className="section work visible">
       <div className="section__inner">

@@ -1,10 +1,7 @@
 import React from 'react'
 import SocialLinks from './SocialLinks'
-import { updateLocation } from '../utils/helpers'
-
 
 const Home = () => {
-  updateLocation()
   return (
     <section className="section hero visible">
       <div className="section__inner">

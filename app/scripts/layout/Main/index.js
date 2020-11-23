@@ -2,8 +2,13 @@ import React from 'react'
 import { Switch, Route } from 'react-router-dom'
 import { routes } from '../../router/routes'
 import Hero from '../../components/Home'
+import { useCurrentLocation } from '../../utils/hooks'
+
 
 const Main = ({ loaded }) => {
+
+  useCurrentLocation()
+
   return (
     <main className={`main ${loaded && 'app-loaded'}`}>
       <Switch>
