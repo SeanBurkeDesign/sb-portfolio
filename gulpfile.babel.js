@@ -1,6 +1,7 @@
 import gulp from 'gulp'
 
 gulp.task('browserSync', require('./gulp/tasks/browserSync').init)
+gulp.task('expressReload', require('./gulp/tasks/expressReload').expressReload)
 gulp.task('clean', require('./gulp/tasks/clean').cleanBuild)
 gulp.task('copy:favicon', require('./gulp/tasks/copy').copyFavicon)
 gulp.task('copy:images', require('./gulp/tasks/copy').copyImages)
@@ -33,4 +34,5 @@ exports.default = gulp.series(
     'copy:fonts'
   ),
   'browserSync',
+  'expressReload'
 )

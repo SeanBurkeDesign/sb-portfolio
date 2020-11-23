@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "dev": "npx gulp",
-    "build": "npx gulp build"
+    "build": "npx gulp build",
+    "start": "node server/index.js"
   },
   "repository": {
     "type": "git",
@@ -75,7 +76,11 @@
   "dependencies": {
     "@reduxjs/toolkit": "^1.4.0",
     "classnames": "^2.2.6",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
     "firebase": "^8.0.1",
+    "http-proxy-middleware": "^1.0.6",
+    "nodemon": "^2.0.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-redux": "^7.2.2",

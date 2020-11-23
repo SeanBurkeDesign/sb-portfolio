@@ -9,6 +9,7 @@ module.exports = {
     server: false,
     open: false,
     notify: false,
+    proxy: 'http://localhost:8080',
     port: 8000
   },
   favicon: {
