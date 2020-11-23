@@ -34,19 +34,5 @@ module.exports = {
     ],
     dest: `${dest}/styles`
   },
-  twig: {
-    data: `${src}/json/`,
-    dest: dest,
-    global: `${src}/json/global.json`,
-    pattern: `${src}/*.twig`,
-    source: src,
-    src: `${src}/*.twig`,
-    namespaces: {
-      includes: `${src}/includes`
-    },
-    watchSrc: [
-      `${src}/**/*.twig`,
-      `${src}/json/*.json`
-    ]
   }
 }

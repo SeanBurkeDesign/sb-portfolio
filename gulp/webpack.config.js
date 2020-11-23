@@ -1,6 +1,7 @@
 const config = require('./config')
 const path = require('path')
 const webpack = require('webpack')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
   context: path.resolve(config.app),
@@ -49,7 +50,12 @@ module.exports = {
     ]
   },
   devtool: false,
-  plugins: [],
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: '../app/index.html',
+      filename: './index.html'
+    })
+  ],
   stats: {
     colors: true,
     env: true,

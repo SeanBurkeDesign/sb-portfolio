@@ -20,7 +20,7 @@
   - [x] Class components => function components
   - [x] Add CSSTransitions for route switching
   - [ ] Add Express
-  - [ ] Remove Twig
+  - [x] Remove Twig
   - [ ] Production Dockerfile
   - [ ] Headless CMS
   - [ ] Swap Firebase for Mongo
