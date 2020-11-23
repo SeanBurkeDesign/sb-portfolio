@@ -12,7 +12,7 @@ const Nav = () => {
         </div>
         <div className="nav__links">
           {navRoutes.map((route) =>
-            <NavButton key={route.path} className="nav__link" name={route.name} path={route.path}/>
+            <NavButton key={route.path} exact={route.exact} className="nav__link" name={route.name} path={route.path}/>
           )}
         </div>
       </div>
