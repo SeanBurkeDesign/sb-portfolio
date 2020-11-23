@@ -13,12 +13,29 @@ h3 {
     left: 0;
     max-width: 0;
     position: absolute;
-    transition: max-width .5s ease-in-out;
-    transition-delay: .5s;
 
-    .app-loaded .visible & {
+
+    .fade-enter &,
+    .fade-appear & {
+      transition: max-width 500ms ease-in-out;
+      transition-delay: 500ms;
+    }
+
+    .fade-enter-active &,
+    .fade-appear-active &,
+    .fade-enter-done & {
       max-width: 100%;
     }
+
+    .fade-exit & {
+      transition: max-width 500ms ease-in-out;
+      transition-delay: 0;
+    }
+
+    .fade-exit-active & {
+      max-width: 0;
+    }
+
   }
 
   &:before {
