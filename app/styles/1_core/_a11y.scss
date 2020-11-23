@@ -1,0 +1,10 @@
+.keyboard-active {
+  a,
+  button,
+  .button {
+    &:focus {
+      outline: 4px double currentColor;
+      outline-offset: .5rem;
+    }
+  }
+}
