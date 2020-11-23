@@ -5,28 +5,28 @@ import Contact from '../components/Contact'
 
 export const home = {
   path: '/',
-  component: Home,
+  Component: Home,
   name: 'Home',
   exact: true
 }
 
 export const bio = {
   path: '/bio',
-  component: Bio,
+  Component: Bio,
   name: 'Bio',
   exact: true
 }
 
 export const work = {
   path: '/work',
-  component: Work,
+  Component: Work,
   name: 'Work',
   exact: true
 }
 
 export const contact = {
   path: '/contact',
-  component: Contact,
+  Component: Contact,
   name: 'Contact',
   exact: true
 }

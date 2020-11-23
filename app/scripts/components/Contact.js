@@ -1,9 +1,7 @@
 import React from 'react'
-import { updateLocation } from '../utils/helpers'
 import ContactForm from './ContactForm'
 
 const Contact = () => {
-  updateLocation()
   return (
     <section className="section contact visible">
       <div className="section__inner">

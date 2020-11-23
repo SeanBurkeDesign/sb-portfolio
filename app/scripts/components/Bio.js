@@ -1,8 +1,6 @@
 import React from 'react'
-import { updateLocation } from '../utils/helpers'
 
 const Bio = () => {
-  updateLocation()
   return (
     <section className="section bio visible">
       <div className="section__inner">

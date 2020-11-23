@@ -13,11 +13,6 @@ button {
     cursor: pointer;
     outline: none;
   }
-
-  &:focus {
-    outline: 4px double currentColor;
-    outline-offset: .5rem;
-  }
 }
 
 .button {

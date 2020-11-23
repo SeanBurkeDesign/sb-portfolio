@@ -1,4 +1,4 @@
-.hero {
+.home {
   .section__inner {
     display: flex;
     flex-direction: column;
@@ -21,21 +21,10 @@
   h2 {
     @include font-size(20);
     font-weight: 400;
-
-    &:before,
-    &:after {
-      max-width: 0;
-      transition: max-width .5s ease-in-out;
-      transition-delay: .5s;
-
-      .app-loaded & {
-        max-width: 100%;
-      }
-    }
   }
 
   .social-links {
-    margin: 3rem 0;
+    margin: 3rem 0 0;
   }
 
 }

@@ -1,11 +1,16 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
-const NavButton = ({ path, className, name }) => {  
+const NavButton = ({ path, exact, className, name }) => {  
   return (
-    <Link to={path} className={`button ${className ?? ''}`}>
+    <NavLink
+      to={path}
+      exact={exact}
+      className={`button ${className ?? ''}`}
+      activeClassName={`${className}--active`}
+    >
       {name}
-    </Link>
+    </NavLink>
   )
 }
 
