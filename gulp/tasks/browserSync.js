@@ -41,17 +41,6 @@ function init(done) {
         log(`File ${path} was changed`)
       })
 
-    // watch twig
-    gulp
-    .watch(
-      config.twig.watchSrc,
-      BROWSERSYNC_DEFAULT_OPTIONS,
-      gulp.series('twig', reload)
-    )
-    .on('change', function(path) {
-      log(`File ${path} was changed`)
-    })
-
     // watch scripts
     gulp
       .watch(
