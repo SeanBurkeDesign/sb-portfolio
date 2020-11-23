@@ -18,6 +18,7 @@
   - [x] React Router
   - [x] Redux
   - [x] Class components => function components
+  - [x] Add CSSTransitions for route switching
   - [ ] Add Express
   - [ ] Remove Twig
   - [ ] Production Dockerfile
