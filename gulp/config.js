@@ -9,6 +9,7 @@ module.exports = {
     server: false,
     open: false,
     notify: false,
+    proxy: 'http://localhost:8080',
     port: 8000
   },
   favicon: {
@@ -20,8 +21,8 @@ module.exports = {
     dest: `${dest}/images`
   },
   fonts: {
-    src: `${src}/fonts/**`,
-    dest: `${dest}/fonts`
+    src: `${src}/assets/fonts/**`,
+    dest: `${dest}/assets/fonts`
   },
   scripts: {
     all: `${src}/**/*.js`,
@@ -30,23 +31,8 @@ module.exports = {
   },
   styles: {
     src: [
-      `${src}/styles/**/*.{sass,scss}`
+      `${src}/assets/styles/**/*.{sass,scss}`
     ],
-    dest: `${dest}/styles`
-  },
-  twig: {
-    data: `${src}/json/`,
-    dest: dest,
-    global: `${src}/json/global.json`,
-    pattern: `${src}/*.twig`,
-    source: src,
-    src: `${src}/*.twig`,
-    namespaces: {
-      includes: `${src}/includes`
-    },
-    watchSrc: [
-      `${src}/**/*.twig`,
-      `${src}/json/*.json`
-    ]
+    dest: `${dest}/assets/styles`
   }
 }

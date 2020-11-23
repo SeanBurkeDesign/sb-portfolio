@@ -2,27 +2,33 @@
 ### An experiment in rebuilding my very outdated portfolio website.
 
 #### Stack
-  - Docksal
+  - Docksal (development)
+  - Docker (production)
   - Node
+  - Express
   - React
   - Webpack
-  - Firebase
-  - Firestore
-  - Twig
-  - SASS
-  - Gulp
-  - ESLint
-  - Stylelint
+  - MongoDB
+  - Contentful CMS
 
-### To-Do
+
+#### To-Do
+  - [ ] Build API to pull content from CMS
+  - [ ] Error pages
+  - [ ] Ditch Firebase/Firestore
+  - [ ] Setup new database (Leaning towards Mongo)
+  - [ ] Production security
+  - [ ] Production Dockerfile
+  - [ ] Update Hosting config
+  - [ ] CONTENT ENTRY
+
+#### To-Done
   - [x] React Router
   - [x] Redux
   - [x] Class components => function components
   - [x] Add CSSTransitions for route switching
-  - [ ] Add Express
-  - [ ] Remove Twig
-  - [ ] Production Dockerfile
-  - [ ] Headless CMS
-  - [ ] Swap Firebase for Mongo
-  - [ ] Reconfigure Hosting config
+  - [x] Add Express
+  - [x] Remove Twig
+  - [x] Headless CMS (Contentful)
+  - [x] Setup Contentful
 

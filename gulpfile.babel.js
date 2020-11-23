@@ -1,12 +1,12 @@
 import gulp from 'gulp'
 
 gulp.task('browserSync', require('./gulp/tasks/browserSync').init)
+gulp.task('expressReload', require('./gulp/tasks/expressReload').expressReload)
 gulp.task('clean', require('./gulp/tasks/clean').cleanBuild)
 gulp.task('copy:favicon', require('./gulp/tasks/copy').copyFavicon)
 gulp.task('copy:images', require('./gulp/tasks/copy').copyImages)
 gulp.task('copy:fonts', require('./gulp/tasks/copy').copyFonts)
 gulp.task('styles', require('./gulp/tasks/styles').buildStyles)
-gulp.task('twig', require('./gulp/tasks/twig').compile)
 gulp.task('webpack:build', require('./gulp/tasks/webpack').buildProd)
 gulp.task('webpack:dev', require('./gulp/tasks/webpack').buildDev)
 
@@ -16,7 +16,6 @@ gulp.task(
     'clean',
     gulp.parallel(
       'webpack:build',
-      'twig',
       'styles',
       'copy:favicon',
       'copy:images',
@@ -30,10 +29,10 @@ exports.default = gulp.series(
   gulp.parallel(
     'webpack:dev',
     'styles',
-    'twig',
     'copy:favicon',
     'copy:images',
     'copy:fonts'
   ),
   'browserSync',
+  'expressReload'
 )
