@@ -26,7 +26,6 @@ export const useLoadingStatus = () => {
 
   useEffect(() => {
     setState({ loaded: true })
-    document.documentElement.classList.remove('no-js')
   }, [state.loaded])
 
   return state
