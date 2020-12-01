@@ -3,10 +3,10 @@ import { BrowserRouter as Router } from 'react-router-dom'
 import ArrowNav from './components/ArrowNav'
 import Nav from './components/Nav'
 import Main from './layout/Main'
-import { useKeyboardStatus, useLoadingStatus } from './utils/hooks'
+import { useKeyboardStatus, useAppStatus } from './utils/hooks'
 
 const App = () => {
-  const { loadingState } = useLoadingStatus()
+  let loaded = useAppStatus()
   useKeyboardStatus()
 
   return (
