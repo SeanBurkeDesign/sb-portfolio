@@ -2,7 +2,8 @@ import gulp from 'gulp'
 
 gulp.task('browserSync', require('./gulp/tasks/browserSync').init)
 gulp.task('expressReload', require('./gulp/tasks/expressReload').expressReload)
-gulp.task('clean', require('./gulp/tasks/clean').cleanBuild)
+gulp.task('cleanBuild', require('./gulp/tasks/clean').cleanBuild)
+gulp.task('cleanDev', require('./gulp/tasks/clean').cleanDev)
 gulp.task('copy:favicon', require('./gulp/tasks/copy').copyFavicon)
 gulp.task('copy:images', require('./gulp/tasks/copy').copyImages)
 gulp.task('copy:fonts', require('./gulp/tasks/copy').copyFonts)
@@ -13,7 +14,7 @@ gulp.task('webpack:dev', require('./gulp/tasks/webpack').buildDev)
 gulp.task(
   'build',
   gulp.series(
-    'clean',
+    'cleanBuild',
     gulp.parallel(
       'webpack:build',
       'styles',
@@ -26,13 +27,14 @@ gulp.task(
 gulp.task('build').description = 'Builds project from the app folder into the build, uglifies the JS, and minifies the CSS'
 
 exports.default = gulp.series(
-  gulp.parallel(
-    'webpack:dev',
-    'styles',
-    'copy:favicon',
-    'copy:images',
-    'copy:fonts'
-  ),
+  'cleanDev',
+  'webpack:dev',
+    gulp.parallel(
+      'styles',
+      'copy:favicon',
+      'copy:images',
+      'copy:fonts'
+    ),
   'browserSync',
   'expressReload'
 )
