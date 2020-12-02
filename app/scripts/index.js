@@ -5,6 +5,7 @@ import { Provider } from 'react-redux'
 
 const render = () => {
   const App = require('./App').default
+  document.documentElement.classList.remove('no-js')
 
   ReactDOM.render(
     <Provider store={store}>

@@ -46,7 +46,7 @@ function init(done) {
       .watch(
         config.scripts.all,
         BROWSERSYNC_DEFAULT_OPTIONS,
-        gulp.series('webpack:dev', reload)
+        gulp.series('cleanDev', 'webpack:dev', reload)
       )
       .on('change', function(path) {
         log(`File ${path} was changed`)

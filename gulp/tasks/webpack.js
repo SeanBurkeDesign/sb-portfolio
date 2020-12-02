@@ -35,6 +35,7 @@ function buildProd(done) {
 function buildDev(done) {
   const devConfig = Object.assign(webpackConfig, {
     mode: 'development',
+    cache: false,
     devtool: false,
     optimization: {
       minimize: false
