@@ -1,0 +1,20 @@
+.loader {
+  background-color: $white;
+  display: flex;
+  height: 100vh;
+  place-content: center;
+  place-items: center;
+  position: absolute;
+  transition: opacity 1000ms ease-in-out;
+  width: 100vw;
+  z-index: 10;
+
+  &__spinner {
+    background: none;
+    display: block;
+    margin: auto;
+    max-width: 40rem;
+    shape-rendering: auto;
+  }
+
+}

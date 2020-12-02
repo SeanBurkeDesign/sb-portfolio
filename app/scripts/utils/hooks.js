@@ -21,16 +21,14 @@ export const useCurrentLocation = () => {
 
 }
 
-export const useLoadingStatus = () => {
-  const [state, setState] = useState({ loaded: false }) 
+export const useAppStatus = () => {
+  const [appLoaded, setAppLoaded] = useState(false) 
 
   useEffect(() => {
-    setState({ loaded: true })
-    document.documentElement.classList.remove('no-js')
-  }, [state.loaded])
+    setAppLoaded(true)
+  }, [appLoaded])
 
-  return state
-
+  return appLoaded
 }
 
 export const useKeyboardStatus = () => {
