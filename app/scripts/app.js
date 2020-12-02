@@ -20,7 +20,7 @@ const App = () => {
   return (
     <Router basename="/">
       <Nav />
-      <Main loaded={loadingState}/>
+      <Main />
       <ArrowNav />
     </Router>
   )
