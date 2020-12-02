@@ -5,12 +5,12 @@ import { routes } from '../../router/routes'
 import { useCurrentLocation } from '../../utils/hooks'
 
 
-const Main = ({ loaded }) => {
+const Main = () => {
 
   useCurrentLocation()
 
   return (
-    <main className={`main ${loaded && 'app-loaded'}`}>
+    <main className="main">
       {routes.map(({ path, exact, Component }) => (
         <Route key={path} exact={exact} path={path}>
           {({ match }) => (
